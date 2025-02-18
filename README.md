@@ -3,7 +3,6 @@ React Projects Repository
 Welcome to the React Projects Repository! 🚀 This repository contains a collection of React-based projects showcasing various concepts, best practices, and real-world applications.
 
 📌 About
-
 This repository is dedicated to projects built using React.js, a popular JavaScript library for building user interfaces. Each project is structured to help developers of all levels learn and improve their React skills.
 
 🛠 Technologies Used:
