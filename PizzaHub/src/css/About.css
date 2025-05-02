@@ -1,0 +1,117 @@
+/* Overall structure */
+.about {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  height:100%;
+  position: relative;
+  overflow-x: hidden; 
+}
+
+/* Navbar styling */
+.navbar {
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 2; /* Ensures navbar stays on top */
+}
+
+/* About Top - Full-screen background image */
+.aboutTop {
+  width: 100%;
+  height: calc(100vh - 80px); /* Subtract the navbar height */
+  background-image: url("../assets/left.jpeg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  padding-left: 50px;
+  position: relative;
+}
+
+/* About Us content */
+.contentWrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 100%;
+  width: 40%; /* Controls how wide the text section is */
+  color: white;
+  font-family: "Gill Sans", sans-serif;
+  padding-left: 20px;
+  z-index: 1;
+}
+
+.aboutTop h1 {
+  font-size: 60px;
+  font-weight: 600;
+  margin-bottom: 20px;
+  transform: translateX(-100%);
+  animation: slideIn 1s forwards; /* Slide in from left */
+}
+
+.aboutTop p {
+  font-size: 18px;
+  line-height: 1.6;
+  width: 90%;
+  transform: translateX(-100%);
+  animation: slideIn 1.5s forwards; /* Slide in from left with a delay */
+}
+
+@keyframes slideIn {
+  to {
+    transform: translateX(0);
+  }
+}
+
+/* Footer styling */
+.footer {
+  width: 100%;
+  height: 150px;
+  background-color: #121619;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding-top: 10px;
+  margin-top: auto; /* Pushes footer to the bottom */
+}
+
+.footer p {
+  color: white;
+}
+
+/* Adjustments for smaller screens */
+@media only screen and (max-width: 1300px) {
+  .aboutTop {
+    height: 70vh; /* Adjust image height for smaller screens */
+  }
+
+  .contentWrapper {
+    width: 50%;
+  }
+
+  .aboutTop h1 {
+    font-size: 50px;
+  }
+}
+
+@media only screen and (max-width: 800px) {
+  .aboutTop {
+    height: 60vh; /* Adjust image height for even smaller screens */
+  }
+
+  .contentWrapper {
+    width: 60%;
+  }
+
+  .aboutTop h1 {
+    font-size: 40px;
+  }
+
+  .aboutTop p {
+    font-size: 16px;
+  }
+}

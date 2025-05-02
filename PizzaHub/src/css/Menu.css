@@ -1,0 +1,109 @@
+.menu {
+  width: 100%;
+  height: auto;
+  display: flex;
+
+  background: url("../assets/art.jpg");
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.menuTitle {
+  font-family: roboto;
+  font-size: 60px;
+  color: rgb(12, 1, 1);
+  text-shadow: 2px 2px 20px rgb(124, 50, 50);
+}
+
+/* GRID LAYOUT */
+.menuList {
+  width: 70vw;
+  height: auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  place-items: center;
+}
+
+/* MENU ITEM STYLING */
+.menuItem {
+  border-radius: 15px;
+  width: 300px;
+  height: 350px;
+  margin: 20px;
+  background-color: rgb(209, 125, 153);
+  box-shadow: 0px 3px 15px rgba(0, 0, 0, 0.2);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between; /* Ensures price stays inside */
+  padding-bottom: 15px;
+  position: relative;
+  overflow: hidden;
+  transition: transform 0.3s ease-in-out;
+}
+
+/* Image Section */
+.menuItem div {
+  border-top-left-radius: 15px;
+  border-top-right-radius: 15px;
+  width: 100%;
+  height: 200px;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+/* Title & Price Styling */
+.menuItem h1 {
+  font-size: 22px;
+  text-align: center;
+  margin: 10px 0;
+  color: #333;
+}
+
+.menuItem p {
+  font-size: 20px;
+  font-weight: 600;
+  color: green;
+  margin-bottom: 10px;
+}
+
+/* BUTTON STYLE */
+.menuItem button {
+  width: 80%;
+  padding: 10px;
+  background-color: #ff6600;
+  color: white;
+  font-size: 16px;
+  font-weight: bold;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background 0.3s ease-in-out;
+}
+
+.menuItem button:hover {
+  background-color: #cc5500;
+}
+
+/* COOL HOVER EFFECT */
+.menuItem:hover {
+  box-shadow: 0px 3px 15px rgba(0, 0, 0, 0.5);
+  transform: scale(1.05);
+  cursor: pointer;
+}
+
+/* GRID RESPONSIVENESS */
+@media only screen and (max-width: 1300px) {
+  .menuList {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media only screen and (max-width: 800px) {
+  .menuList {
+    grid-template-columns: 1fr;
+  }
+}
+
